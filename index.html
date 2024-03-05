@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie2_Styrchak23</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="tg">
+        <div class="wrap lh-lg">
+            <ul class="list-unstyled-sm">
+            <h1 id="links" class="text-center"><strong><em>Скриншоты выполнения 2 задания по дисциплине "WEB-backend"</em></strong></h1>
+            <li>Для выполнения второго задания нам необходимо зайти в программу FileZilla</li>
+            <img src="2024-03-05_19-17-56.png" alt="sign" style="width: 720px;height: 680px;">
+            <li>Здесь мы переносим с локального компьютера заранее скачанную папку Files и помещаем её в каталог /www</li>
+            <img src="2024-03-05_19-19-43.png" alt="sign" style="width: 720px;height: 680px;">
+            <li> Все перенеслось успешно </li>
+            <img src="2024-03-05_19-20-54.png" alt="sign" style="width: 720px;height: 680px;">
+            <li> Далее проверяем загрузку файлов в браузере из учебного домена http://u67293.kubsu-dev.ru/. </li>
+            <img src="2024-03-05_19-23-44.png" alt="sign" style="width: 650px;height: 350px;">
+            <li> Затем проверяем работоспособность index.php </li>
+            <img src="2024-03-05_19-24-09.png" alt="sign" style="width: 720px;height: 320px;">
+            <li> Далее с помощью программы Putty выполнить задания отправкой HTTP-запросов к
+                веб-серверу:
+            <br /> Для первого и второго пункта наше подключение на сервер будет происходить через 80 порт,тип подключения Other и выбираем Raw, также выбираем не закрывать окно
+            </li>
+            <img src="Снимок экрана 2024-03-05 202007.png" alt="sign" style="width: 720px;height: 680px;">
+                <li>1) Получить главную страницу методом GET в протоколе HTTP 1.0;</li>
+                <img src="Снимок экрана 2024-03-05 192631.png" alt="sign" style="width: 720px;height: 680px;">
+                <img src="Снимок экрана 2024-03-05 192708.png" alt="sign" style="width: 720px;height: 680px;">
+                <img src="Снимок экрана 2024-03-05 192736.png" alt="sign" style="width: 720px;height: 680px;">
+                <li>2) Получить внутреннюю страницу методом GET в протоколе HTTP 1.1;</li>
+                <img src="2024-03-05_19-34-26.png" alt="sign" style="width: 720px;height: 680px;">
+                <li>3) Определить размер файла file.tar.gz, не скачивая его;
+                    <br />Для этого нам необходимо подключиться к PuTTY так, как мы делали в первом задании и при помощи команды cd www зайти в каталог /www, после перейти в каталог /www cd files.
+                    Если это не сделать, то файл в директории не будет найден, как показано на скрине. Затем при помощи команды wc -c file.tar.gz определяем размер файла.
+                </li>
+                <img src="2024-03-05_19-37-09.png" alt="sign" style="width: 720px;height: 320px;">
+                <li>4)  Определить медиатип ресурса /image.png;
+                    <br />Для этого нам необходимо воспользоваться командой file --mime-type image.png </li>
+                <img src="Снимок экрана 2024-03-05 194144.png" alt="sign" style="width: 630px;height: 120px;">
+                <li>5)  Отправить комментарий на сервер по адресу /index.php;
+                    <br />Для этого нам необходимо воспользоваться командой curl -X POST -d "comment=Hello, World! " http://u67293.kubsu-dev.ru/files/index.php</li>
+                <img src="Снимок экрана 2024-03-05 194320.png" alt="sign" style="width: 630px;height: 120px;">
+                <li>6) Получить первые 100 байт файла /file.tar.gz;
+                    <br />Для этого нам необходимо воспользоваться командой head -c 100 file.tar.gz
+                </li>
+                <img src="Снимок экрана 2024-03-05 194354.png" alt="sign" style="width: 630px;height: 120px;">
+                <li>7) Определить кодировку ресурса /index.php.
+                    <br />Для этого нам необходимо воспользоваться командой file --mime-encoding index.php
+                </li>
+                <img src="Снимок экрана 2024-03-05 194520.png" alt="sign" style="width: 630px;height: 120px;">
+        </ul>
+        </div>
+    </div>
+</body>
+</html>
